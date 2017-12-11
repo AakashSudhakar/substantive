@@ -1,0 +1,54 @@
+<!-- main.handlebars (DNWorld) -->
+
+<!-- !DOCTYPE html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Substantive</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <nav class="container-fluid navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Substantive: Substance Classifications</a>
+        </div>
+        {{#if currentUser}}
+        <div class="login pull-right">
+        <button class="btn btn-default navbar-btn" onclick="location.href = '/profile'; return false;"> My Progress</button>
+        <button class="btn btn-default navbar-btn" onclick="location.href = '/logout'; return false;"> Logout</button>
+        </div>
+        {{else}}    
+        <form class="login pull-right">
+            <button class="btn btn-default navbar-btn modal-trigger" data-target="modalL" onclick="location.href = '/login'; return false;"> Login </button>
+            <button class="btn btn-default navbar-btn modal-trigger" data-target="modalS" style="margin-right: 10px;" onclick="location.href = '/sign-up'; return false;"> Sign Up </button>
+        </form>
+        {{/if}}
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      {{{home}}}
+      {{{body}}}
+    </div>
+
+  </body>
+  <footer id="homeFooter">
+    <nav class="navbar navbar-default" style="padding 10px 0px 0px 0px;">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <div class="form-group" style="padding: 0px 0px 0px 0px;">
+                  <a id="homeHeaderButtons" class="btn btn-default navbar-btn" href="/posts">View Posts</a>
+                  <form action=""></form>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </footer>
+</html>

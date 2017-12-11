@@ -1,0 +1,44 @@
+<header>
+</header>
+<main>
+    <div class="container">
+        <p style="text-align:center;"> {{isCorrect}} </p>
+
+        <div class="card container-well">
+            <p> Classify the following substance into its appropriate category: </p>
+            <h1 class="theSubstance"> {{correctSubstance}} </h1>
+        </div>
+
+        <div class="options">
+            {{#each options}}
+                <form method="POST" action="/">
+                    <input type="hidden" name="userAnswer" value={{this}} />
+                    <input type="hidden" name="correctAnswer" value={{@root.correctClassifier}}/>
+                    <input type="hidden" name="correctName" value={{@root.correctSubstance}}/>
+                    <button class="btn" type="submit"><h4>{{this}}</h4></button>
+                </form>
+            {{/each}}
+        </div>
+    </div>
+</main>
+
+<!-- Modal Structure -->
+  <div id="modalL" class="modal">
+    <form class="modal-content" method="post" action="/login">
+      <input name="username" placeholder="username"/>
+      <input name="password" type="password" placeholder="password"/>
+      <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat" type="submit">Log In</button>
+      </div>
+    </form>
+  </div>
+  <!-- Modal Structure -->
+  <div id="modalS" class="modal">
+    <form class="modal-content" method="post" action="/sign-up">
+      <input name="username" placeholder="username"/>
+      <input name="password" type="password" placeholder="password"/>
+    <div class="modal-footer">
+      <button class="modal-action modal-close waves-effect waves-green btn-flat" type="submit">Sign Up</button>
+    </div>
+    </form>
+  </div>

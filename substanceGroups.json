@@ -1,0 +1,12 @@
+[
+    {"name": "Methamphetamine", "classification": "drugs"},
+    {"name": "Adderall", "classification": "medications"},
+    {"name": "Modafinil", "classification": "nootropics"},
+    {"name": "Creatine", "classification": "supplements"},
+    {"name": "Fish oil", "classification": "vitamins"},
+    {"name": "Dopamine", "classification": "neurotransmitters"},
+    {"name": "Oxytocin", "classification": "neurotransmitters"},
+    {"name": "Serotonin", "classification": "neurotransmitters"},
+    {"name": "Endorphins", "classification": "neurotransmitters"},
+    {"name": "Cortisol", "classification": "neurotransmitters"}
+]

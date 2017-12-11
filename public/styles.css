@@ -1,0 +1,25 @@
+a: hover {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: rgb(180, 150, 180);
+    text-color: white;
+    padding-bottom: 10px;
+}
+
+.theSubstance {
+}
+
+.card {
+    box-shadow: 0px 0px 5px 0px;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    text: white;
+    padding-left: 60px;
+}

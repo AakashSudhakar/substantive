@@ -1,0 +1,16 @@
+<!-- posts-index.handlebars (substantive) -->
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3 postDisplayColumn" style="text-align: center;">
+        <h1 class="allPostTitle">ALL POSTS</h1>
+        {{#each posts}}
+            <div class="container-fluid well postWell">
+                <a class="postIcon" href="/posts/{{ this._id }}">
+                    <h1 class="previewPostText">{{ this.subject }}</h1>
+                    <h3 class="previewPostText">{{ this.classification }}</h4>
+                    <p class="previewPostText">Click to view post.</p>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>
